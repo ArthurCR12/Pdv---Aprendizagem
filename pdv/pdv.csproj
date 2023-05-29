@@ -1,0 +1,186 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{77FDB118-485B-4AB7-AD0C-AE78A983C86F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>pdv</RootNamespace>
+    <AssemblyName>pdv</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=8.0.32.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CheckBD.cs" />
+    <Compile Include="Conexao.cs" />
+    <Compile Include="Telas\Cadastros\frmCadCargos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\Cadastros\frmCadCargos.Designer.cs">
+      <DependentUpon>frmCadCargos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\Cadastros\frmCadClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\Cadastros\frmCadClientes.Designer.cs">
+      <DependentUpon>frmCadClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\Cadastros\frmCadForn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\Cadastros\frmCadForn.Designer.cs">
+      <DependentUpon>frmCadForn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\Cadastros\frmCadFuncionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\Cadastros\frmCadFuncionario.Designer.cs">
+      <DependentUpon>frmCadFuncionario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTelaPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTelaPrincipal.Designer.cs">
+      <DependentUpon>frmTelaPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Telas\Cadastros\frmCadGrupos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\Cadastros\frmCadGrupos.Designer.cs">
+      <DependentUpon>frmCadGrupos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\Cadastros\frmCadProd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\Cadastros\frmCadProd.Designer.cs">
+      <DependentUpon>frmCadProd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\PDV\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\PDV\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="frmTelaPrincipal.resx">
+      <DependentUpon>frmTelaPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Telas\Cadastros\frmCadCargos.resx">
+      <DependentUpon>frmCadCargos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\Cadastros\frmCadClientes.resx">
+      <DependentUpon>frmCadClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\Cadastros\frmCadForn.resx">
+      <DependentUpon>frmCadForn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\Cadastros\frmCadFuncionario.resx">
+      <DependentUpon>frmCadFuncionario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\Cadastros\frmCadGrupos.resx">
+      <DependentUpon>frmCadGrupos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\Cadastros\frmCadProd.resx">
+      <DependentUpon>frmCadProd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\PDV\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ponto-de-venda.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sem_foto.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cadprod1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cadprod11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cli2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2Cadprod2 cópia.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3forn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\adicionar-usuario.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loginsenha.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
