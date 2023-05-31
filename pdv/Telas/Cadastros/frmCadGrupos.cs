@@ -33,7 +33,6 @@ namespace pdv.Telas.Cadastros
             CarregarGrid();
             FormatarGrid();
         }
-
         private void CarregarGrid()
         {
             try
@@ -52,20 +51,17 @@ namespace pdv.Telas.Cadastros
                 MessageBox.Show(ex.Message);                
             }
         }
-
         private void FormatarGrid()
         {
             grid.Columns[0].HeaderText = "";
             grid.Columns[1].HeaderText = "Descrição";
 
             grid.Columns[0].Visible = false;
-        }
-    
+        }    
         private void btnFechar_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-
         private void grid_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex > -1)
@@ -76,7 +72,6 @@ namespace pdv.Telas.Cadastros
             }
             else { return; }
         }
-
         private void HabilitarCampos()
         {
             txtGrupo.Enabled = true;
@@ -103,6 +98,11 @@ namespace pdv.Telas.Cadastros
         {
             try
             {
+                if (txtGrupo.Text.ToString().Trim() == "")
+                {
+                    MessageBox.Show("É necessario Informar um Grupo !", "Cadastro De Grupos", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                    txtGrupo.Focus(); return;
+                }
                 con.AbrirConexao();
                 sql = "INSERT INTO tbl_grupo (grupo_descricao) VALUES (@grupo_descricao)";
                 cmd = new MySqlCommand(sql, con.con);
@@ -121,11 +121,7 @@ namespace pdv.Telas.Cadastros
             {
                 MessageBox.Show(ex.Message);
             }
-            if (txtGrupo.Text.ToString().Trim() == "")
-            {
-                MessageBox.Show("É necessario Informar um Grupo !", "Cadastro De Grupos", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-                txtGrupo.Focus(); return;
-            }            
+                        
                        
         }
         private void AlterarInformacoes()
@@ -162,15 +158,7 @@ namespace pdv.Telas.Cadastros
             if (e.KeyCode == Keys.Escape)
             {
                 var resposta = MessageBox.Show("Deseja Realmente Sair ?", "SAIR", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-                if (resposta == DialogResult.Yes)
-                {
-                    this.Close();
-                }
-                else
-                {
-                    return;
-                }
-
+                if (resposta == DialogResult.Yes) { this.Close(); } else { return; }
             }
         }
 

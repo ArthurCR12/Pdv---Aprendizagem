@@ -47,8 +47,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CheckBD.cs" />
-    <Compile Include="Conexao.cs" />
+    <Compile Include="AcessoDB\CheckBD.cs" />
+    <Compile Include="AcessoDB\Conexao.cs" />
     <Compile Include="Telas\Cadastros\frmCadCargos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -73,10 +73,10 @@
     <Compile Include="Telas\Cadastros\frmCadFuncionario.Designer.cs">
       <DependentUpon>frmCadFuncionario.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmTelaPrincipal.cs">
+    <Compile Include="Telas\frmTelaPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmTelaPrincipal.Designer.cs">
+    <Compile Include="Telas\frmTelaPrincipal.Designer.cs">
       <DependentUpon>frmTelaPrincipal.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
@@ -93,6 +93,12 @@
     <Compile Include="Telas\Cadastros\frmCadProd.Designer.cs">
       <DependentUpon>frmCadProd.cs</DependentUpon>
     </Compile>
+    <Compile Include="Telas\Cadastros\frmCadUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\Cadastros\frmCadUsuario.Designer.cs">
+      <DependentUpon>frmCadUsuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Telas\frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -105,7 +111,7 @@
     <Compile Include="Telas\PDV\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="frmTelaPrincipal.resx">
+    <EmbeddedResource Include="Telas\frmTelaPrincipal.resx">
       <DependentUpon>frmTelaPrincipal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -135,6 +141,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Telas\Cadastros\frmCadProd.resx">
       <DependentUpon>frmCadProd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\Cadastros\frmCadUsuario.resx">
+      <DependentUpon>frmCadUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Telas\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>

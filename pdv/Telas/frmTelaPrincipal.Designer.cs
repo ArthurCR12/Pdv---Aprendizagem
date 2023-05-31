@@ -104,6 +104,7 @@
             this.menuCadUser.Name = "menuCadUser";
             this.menuCadUser.Size = new System.Drawing.Size(185, 22);
             this.menuCadUser.Text = "Cadastro de Usuários";
+            this.menuCadUser.Click += new System.EventHandler(this.menuCadUser_Click);
             // 
             // menuCadCargos
             // 
@@ -232,7 +233,7 @@
             this.btn_CadFuncionarios.ForeColor = System.Drawing.Color.White;
             this.btn_CadFuncionarios.Image = global::pdv.Properties.Resources.adicionar_usuario;
             this.btn_CadFuncionarios.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_CadFuncionarios.Location = new System.Drawing.Point(0, 334);
+            this.btn_CadFuncionarios.Location = new System.Drawing.Point(0, 350);
             this.btn_CadFuncionarios.Name = "btn_CadFuncionarios";
             this.btn_CadFuncionarios.Size = new System.Drawing.Size(295, 70);
             this.btn_CadFuncionarios.TabIndex = 9;
@@ -248,7 +249,7 @@
             this.label1.AutoSize = true;
             this.label1.Dock = System.Windows.Forms.DockStyle.Top;
             this.label1.ForeColor = System.Drawing.Color.Blue;
-            this.label1.Location = new System.Drawing.Point(0, 321);
+            this.label1.Location = new System.Drawing.Point(0, 337);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(295, 13);
             this.label1.TabIndex = 12;
@@ -266,7 +267,7 @@
             this.btn_CadForn.ForeColor = System.Drawing.Color.White;
             this.btn_CadForn.Image = global::pdv.Properties.Resources._3forn;
             this.btn_CadForn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_CadForn.Location = new System.Drawing.Point(0, 251);
+            this.btn_CadForn.Location = new System.Drawing.Point(0, 267);
             this.btn_CadForn.Name = "btn_CadForn";
             this.btn_CadForn.Size = new System.Drawing.Size(295, 70);
             this.btn_CadForn.TabIndex = 8;
@@ -282,7 +283,7 @@
             this.label3.AutoSize = true;
             this.label3.Dock = System.Windows.Forms.DockStyle.Top;
             this.label3.ForeColor = System.Drawing.Color.Blue;
-            this.label3.Location = new System.Drawing.Point(0, 238);
+            this.label3.Location = new System.Drawing.Point(0, 254);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(295, 13);
             this.label3.TabIndex = 11;
@@ -300,7 +301,7 @@
             this.btn_CadCli.ForeColor = System.Drawing.Color.White;
             this.btn_CadCli.Image = global::pdv.Properties.Resources.cli2;
             this.btn_CadCli.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_CadCli.Location = new System.Drawing.Point(0, 168);
+            this.btn_CadCli.Location = new System.Drawing.Point(0, 184);
             this.btn_CadCli.Name = "btn_CadCli";
             this.btn_CadCli.Size = new System.Drawing.Size(295, 70);
             this.btn_CadCli.TabIndex = 7;
@@ -316,7 +317,7 @@
             this.label2.AutoSize = true;
             this.label2.Dock = System.Windows.Forms.DockStyle.Top;
             this.label2.ForeColor = System.Drawing.Color.Blue;
-            this.label2.Location = new System.Drawing.Point(0, 155);
+            this.label2.Location = new System.Drawing.Point(0, 171);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(295, 13);
             this.label2.TabIndex = 10;
@@ -334,7 +335,7 @@
             this.btn_CadProd.ForeColor = System.Drawing.Color.White;
             this.btn_CadProd.Image = global::pdv.Properties.Resources._2Cadprod2_cópia;
             this.btn_CadProd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_CadProd.Location = new System.Drawing.Point(0, 85);
+            this.btn_CadProd.Location = new System.Drawing.Point(0, 101);
             this.btn_CadProd.Name = "btn_CadProd";
             this.btn_CadProd.Size = new System.Drawing.Size(295, 70);
             this.btn_CadProd.TabIndex = 7;
@@ -353,7 +354,7 @@
             this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelLogo.Location = new System.Drawing.Point(0, 0);
             this.panelLogo.Name = "panelLogo";
-            this.panelLogo.Size = new System.Drawing.Size(295, 85);
+            this.panelLogo.Size = new System.Drawing.Size(295, 101);
             this.panelLogo.TabIndex = 7;
             // 
             // logoPanelLogo
@@ -361,7 +362,7 @@
             this.logoPanelLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(42)))), ((int)(((byte)(42)))));
             this.logoPanelLogo.Location = new System.Drawing.Point(12, 3);
             this.logoPanelLogo.Name = "logoPanelLogo";
-            this.logoPanelLogo.Size = new System.Drawing.Size(277, 76);
+            this.logoPanelLogo.Size = new System.Drawing.Size(277, 91);
             this.logoPanelLogo.TabIndex = 7;
             this.logoPanelLogo.TabStop = false;
             // 
@@ -371,20 +372,22 @@
             this.panelTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTop.Location = new System.Drawing.Point(295, 24);
             this.panelTop.Name = "panelTop";
-            this.panelTop.Size = new System.Drawing.Size(889, 85);
+            this.panelTop.Size = new System.Drawing.Size(889, 101);
             this.panelTop.TabIndex = 6;
             // 
             // panelPrincipal
             // 
+            this.panelPrincipal.BackColor = System.Drawing.Color.Gray;
             this.panelPrincipal.Controls.Add(this.toolStrip1);
             this.panelPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelPrincipal.Location = new System.Drawing.Point(295, 109);
+            this.panelPrincipal.Location = new System.Drawing.Point(295, 125);
             this.panelPrincipal.Name = "panelPrincipal";
-            this.panelPrincipal.Size = new System.Drawing.Size(889, 652);
+            this.panelPrincipal.Size = new System.Drawing.Size(889, 636);
             this.panelPrincipal.TabIndex = 7;
             // 
             // toolStrip1
             // 
+            this.toolStrip1.BackColor = System.Drawing.Color.Gray;
             this.toolStrip1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripLabel1,
@@ -396,7 +399,7 @@
             this.toolStripSeparator2,
             this.toolStripLabel2,
             this.cargoStripLB});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 627);
+            this.toolStrip1.Location = new System.Drawing.Point(0, 611);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(889, 25);
             this.toolStrip1.TabIndex = 0;
@@ -404,18 +407,21 @@
             // 
             // toolStripLabel1
             // 
+            this.toolStripLabel1.ForeColor = System.Drawing.Color.White;
             this.toolStripLabel1.Name = "toolStripLabel1";
             this.toolStripLabel1.Size = new System.Drawing.Size(65, 22);
             this.toolStripLabel1.Text = "Data/Hora:";
             // 
             // dataHotaStripLB
             // 
+            this.dataHotaStripLB.ForeColor = System.Drawing.Color.White;
             this.dataHotaStripLB.Name = "dataHotaStripLB";
             this.dataHotaStripLB.Size = new System.Drawing.Size(68, 22);
             this.dataHotaStripLB.Text = "00/00/0000 ";
             // 
             // horaStripLB
             // 
+            this.horaStripLB.ForeColor = System.Drawing.Color.White;
             this.horaStripLB.Name = "horaStripLB";
             this.horaStripLB.Size = new System.Drawing.Size(49, 22);
             this.horaStripLB.Text = "00:00:00";
@@ -427,6 +433,7 @@
             // 
             // toolStripLabel3
             // 
+            this.toolStripLabel3.ForeColor = System.Drawing.Color.White;
             this.toolStripLabel3.Name = "toolStripLabel3";
             this.toolStripLabel3.Size = new System.Drawing.Size(50, 22);
             this.toolStripLabel3.Text = "Usuário:";
@@ -443,6 +450,7 @@
             // 
             // toolStripLabel2
             // 
+            this.toolStripLabel2.ForeColor = System.Drawing.Color.White;
             this.toolStripLabel2.Name = "toolStripLabel2";
             this.toolStripLabel2.Size = new System.Drawing.Size(42, 22);
             this.toolStripLabel2.Text = "Cargo:";

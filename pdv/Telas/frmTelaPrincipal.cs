@@ -98,6 +98,11 @@ namespace pdv
             Telas.Cadastros.frmCadGrupos frm = new Telas.Cadastros.frmCadGrupos();
             frm.ShowDialog();
         }
+        private void menuCadUser_Click(object sender, EventArgs e)
+        {
+            Telas.Cadastros.frmCadUsuario frm = new Telas.Cadastros.frmCadUsuario();
+            frm.ShowDialog();
+        }
 
         private void btn_CadProd_MouseLeave(object sender, EventArgs e)
         {
@@ -139,6 +144,6 @@ namespace pdv
             btn_CadFuncionarios.ForeColor= Color.White;
         }
 
-       
+        
     }
 }
