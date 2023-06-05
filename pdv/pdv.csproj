@@ -49,6 +49,7 @@
   <ItemGroup>
     <Compile Include="AcessoDB\CheckBD.cs" />
     <Compile Include="AcessoDB\Conexao.cs" />
+    <Compile Include="AcessoDB\ManipulacaoTXT.cs" />
     <Compile Include="Telas\Cadastros\frmCadCargos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -111,6 +112,12 @@
     <Compile Include="Telas\PDV\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Telas\Retaguarda\frmCompra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\Retaguarda\frmCompra.Designer.cs">
+      <DependentUpon>frmCompra.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Telas\frmTelaPrincipal.resx">
       <DependentUpon>frmTelaPrincipal.cs</DependentUpon>
     </EmbeddedResource>
@@ -151,6 +158,9 @@
     <EmbeddedResource Include="Telas\PDV\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Telas\Retaguarda\frmCompra.resx">
+      <DependentUpon>frmCompra.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -190,6 +200,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\loginsenha.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\carrinho-de-compras %282%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

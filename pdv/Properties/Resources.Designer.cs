@@ -113,6 +113,16 @@ namespace pdv.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap carrinho_de_compras__2_ {
+            get {
+                object obj = ResourceManager.GetObject("carrinho-de-compras (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap cli2 {
             get {
                 object obj = ResourceManager.GetObject("cli2", resourceCulture);

@@ -21,6 +21,10 @@ namespace pdv.Telas.Cadastros
         int modo_Salvar = 0;
         int id_Excluir = -1;
 
+        int PCadPro = 1; int PCadCli = 1; int PCadForn = 1; int PCadFunc = 1; int PAcCompra = 1;
+
+
+
         public frmCadUsuario()
         {
             InitializeComponent();
@@ -144,12 +148,16 @@ namespace pdv.Telas.Cadastros
                     txtUser.Focus();
                 }
 
+                PermissoesCheck();
+
+
                 con.AbrirConexao();
-                sql = "UPDATE user SET user_name = @user_name, user_password = @user_password WHERE id_user = @id_User";
+                sql = "UPDATE user SET user_name = @user_name, user_password = @user_password, user_pcadprod = @user_pcadprod WHERE id_user = @id_User";
                 cmd = new MySqlCommand (sql,con.con);
                 cmd.Parameters.AddWithValue("id_User", id_User);
                 cmd.Parameters.AddWithValue("user_name", txtUser.Text);
                 cmd.Parameters.AddWithValue("user_password", txtSenha.Text);
+                cmd.Parameters.AddWithValue("user_pcadprod", PCadPro);
                 cmd.ExecuteNonQuery();
                 con.FecharConexao();
 
@@ -224,6 +232,23 @@ namespace pdv.Telas.Cadastros
                 if (respota != DialogResult.Yes) { return; } else { this.Close(); }
             }
         }
+
+        #region CheckBox
+        private void PermissoesCheck()
+        {
+            if (checkBoxCadProd.Checked)
+            {
+                PCadPro = 1;
+            }
+            else
+            {
+                PCadPro = 0;
+            }
+
+        }
+        #endregion CheckBox
+
+
 
     }
 

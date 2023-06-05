@@ -94,12 +94,23 @@ namespace pdv.Telas
                     while (reader.Read())
                     {
                         CheckBD.nomeUser = Convert.ToString(reader["user_name"]);
-                        CheckBD.cargoUser = Convert.ToString(reader["user_cargo"]);
+                        if (CheckBD.cargoUser == "ADMIN")
+                        {
+                            this.Hide();
+                            frmTelaPrincipal frmTelaPrincipal = new frmTelaPrincipal();
+                            frmTelaPrincipal.ShowDialog();
+                            this.Close();
+                        }
+                        else
+                        {
+                            CheckBD.cargoUser = Convert.ToString(reader["user_cargo"]); this.Hide();
+                            frmTelaPrincipal frmTelaPrincipal = new frmTelaPrincipal();
+                            frmTelaPrincipal.ShowDialog();
+                            this.Close();
+                        }
+                        
                     }
-                    this.Hide();                                       
-                    frmTelaPrincipal frmTelaPrincipal = new frmTelaPrincipal();
-                    frmTelaPrincipal.ShowDialog();
-                    this.Close();
+                    
                 }
                 else
                 {

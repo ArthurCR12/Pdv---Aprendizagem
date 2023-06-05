@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTelaPrincipal));
             this.menuTop = new System.Windows.Forms.MenuStrip();
             this.menuCadastros = new System.Windows.Forms.ToolStripMenuItem();
@@ -57,6 +58,8 @@
             this.panelLogo = new System.Windows.Forms.Panel();
             this.logoPanelLogo = new System.Windows.Forms.PictureBox();
             this.panelTop = new System.Windows.Forms.Panel();
+            this.splitter1 = new System.Windows.Forms.Splitter();
+            this.btnCompra = new System.Windows.Forms.Button();
             this.panelPrincipal = new System.Windows.Forms.Panel();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
@@ -68,10 +71,12 @@
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
             this.cargoStripLB = new System.Windows.Forms.ToolStripLabel();
+            this.timer = new System.Windows.Forms.Timer(this.components);
             this.menuTop.SuspendLayout();
             this.panelLeft.SuspendLayout();
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logoPanelLogo)).BeginInit();
+            this.panelTop.SuspendLayout();
             this.panelPrincipal.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -369,11 +374,46 @@
             // panelTop
             // 
             this.panelTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(42)))), ((int)(((byte)(42)))));
+            this.panelTop.Controls.Add(this.splitter1);
+            this.panelTop.Controls.Add(this.btnCompra);
             this.panelTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTop.Location = new System.Drawing.Point(295, 24);
             this.panelTop.Name = "panelTop";
             this.panelTop.Size = new System.Drawing.Size(889, 101);
             this.panelTop.TabIndex = 6;
+            // 
+            // splitter1
+            // 
+            this.splitter1.BackColor = System.Drawing.Color.Blue;
+            this.splitter1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.splitter1.Location = new System.Drawing.Point(193, 0);
+            this.splitter1.Name = "splitter1";
+            this.splitter1.Size = new System.Drawing.Size(3, 101);
+            this.splitter1.TabIndex = 14;
+            this.splitter1.TabStop = false;
+            // 
+            // btnCompra
+            // 
+            this.btnCompra.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnCompra.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnCompra.FlatAppearance.BorderSize = 0;
+            this.btnCompra.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnCompra.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.btnCompra.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCompra.Font = new System.Drawing.Font("Cambria", 15F, System.Drawing.FontStyle.Bold);
+            this.btnCompra.ForeColor = System.Drawing.Color.White;
+            this.btnCompra.Image = global::pdv.Properties.Resources.carrinho_de_compras__2_;
+            this.btnCompra.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnCompra.Location = new System.Drawing.Point(0, 0);
+            this.btnCompra.Name = "btnCompra";
+            this.btnCompra.Size = new System.Drawing.Size(193, 101);
+            this.btnCompra.TabIndex = 13;
+            this.btnCompra.Text = "Compra";
+            this.btnCompra.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCompra.UseVisualStyleBackColor = true;
+            this.btnCompra.Click += new System.EventHandler(this.btnCompra_Click);
+            this.btnCompra.MouseEnter += new System.EventHandler(this.btnCompra_MouseEnter);
+            this.btnCompra.MouseLeave += new System.EventHandler(this.btnCompra_MouseLeave);
             // 
             // panelPrincipal
             // 
@@ -460,6 +500,11 @@
             this.cargoStripLB.Name = "cargoStripLB";
             this.cargoStripLB.Size = new System.Drawing.Size(0, 22);
             // 
+            // timer
+            // 
+            this.timer.Enabled = true;
+            this.timer.Tick += new System.EventHandler(this.timer_Tick);
+            // 
             // frmTelaPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -485,6 +530,7 @@
             this.panelLeft.PerformLayout();
             this.panelLogo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.logoPanelLogo)).EndInit();
+            this.panelTop.ResumeLayout(false);
             this.panelPrincipal.ResumeLayout(false);
             this.panelPrincipal.PerformLayout();
             this.toolStrip1.ResumeLayout(false);
@@ -535,6 +581,9 @@
         private System.Windows.Forms.ToolStripLabel toolStripLabel2;
         private System.Windows.Forms.ToolStripLabel cargoStripLB;
         private System.Windows.Forms.ToolStripLabel horaStripLB;
+        private System.Windows.Forms.Timer timer;
+        private System.Windows.Forms.Button btnCompra;
+        private System.Windows.Forms.Splitter splitter1;
     }
 }
 

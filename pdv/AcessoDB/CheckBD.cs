@@ -9,6 +9,6 @@ namespace pdv
      static class CheckBD
      {
         public static string nomeUser;
-        public static string cargoUser;
+        public static string cargoUser = "ADMIN";
      }
 }

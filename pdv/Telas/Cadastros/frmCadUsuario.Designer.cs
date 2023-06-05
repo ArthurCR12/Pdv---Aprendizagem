@@ -46,9 +46,17 @@
             this.txtSenha = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.checkBoxCompra = new System.Windows.Forms.CheckBox();
+            this.checkBoxCadFunc = new System.Windows.Forms.CheckBox();
+            this.checkBoxCadForn = new System.Windows.Forms.CheckBox();
+            this.checkBoxCadCli = new System.Windows.Forms.CheckBox();
+            this.checkBoxCadProd = new System.Windows.Forms.CheckBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grid)).BeginInit();
             this.panel1.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel2
@@ -58,7 +66,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(800, 33);
+            this.panel2.Size = new System.Drawing.Size(801, 33);
             this.panel2.TabIndex = 67;
             // 
             // label15
@@ -105,7 +113,7 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.grid.DefaultCellStyle = dataGridViewCellStyle2;
             this.grid.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.grid.Location = new System.Drawing.Point(12, 191);
+            this.grid.Location = new System.Drawing.Point(13, 315);
             this.grid.MultiSelect = false;
             this.grid.Name = "grid";
             this.grid.ReadOnly = true;
@@ -131,7 +139,7 @@
             this.btnCancelar.Enabled = false;
             this.btnCancelar.Font = new System.Drawing.Font("Corbel", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.btnCancelar.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnCancelar.Location = new System.Drawing.Point(519, 136);
+            this.btnCancelar.Location = new System.Drawing.Point(520, 260);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(78, 39);
             this.btnCancelar.TabIndex = 83;
@@ -143,7 +151,7 @@
             // 
             this.btnFechar.Font = new System.Drawing.Font("Corbel", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.btnFechar.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnFechar.Location = new System.Drawing.Point(710, 402);
+            this.btnFechar.Location = new System.Drawing.Point(711, 526);
             this.btnFechar.Name = "btnFechar";
             this.btnFechar.Size = new System.Drawing.Size(78, 36);
             this.btnFechar.TabIndex = 84;
@@ -155,7 +163,7 @@
             // 
             this.btnExcluir.Font = new System.Drawing.Font("Corbel", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.btnExcluir.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnExcluir.Location = new System.Drawing.Point(435, 136);
+            this.btnExcluir.Location = new System.Drawing.Point(436, 260);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(78, 39);
             this.btnExcluir.TabIndex = 82;
@@ -167,7 +175,7 @@
             // 
             this.btnEditar.Font = new System.Drawing.Font("Corbel", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.btnEditar.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnEditar.Location = new System.Drawing.Point(351, 136);
+            this.btnEditar.Location = new System.Drawing.Point(352, 260);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(78, 39);
             this.btnEditar.TabIndex = 81;
@@ -179,7 +187,7 @@
             // 
             this.btnNovo.Font = new System.Drawing.Font("Corbel", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.btnNovo.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnNovo.Location = new System.Drawing.Point(183, 136);
+            this.btnNovo.Location = new System.Drawing.Point(184, 260);
             this.btnNovo.Name = "btnNovo";
             this.btnNovo.Size = new System.Drawing.Size(78, 39);
             this.btnNovo.TabIndex = 78;
@@ -212,7 +220,7 @@
             this.btnSalvar.Enabled = false;
             this.btnSalvar.Font = new System.Drawing.Font("Corbel", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.btnSalvar.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnSalvar.Location = new System.Drawing.Point(267, 136);
+            this.btnSalvar.Location = new System.Drawing.Point(268, 260);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(78, 39);
             this.btnSalvar.TabIndex = 80;
@@ -243,6 +251,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.txtSenha);
             this.panel1.Controls.Add(this.txtUser);
@@ -250,14 +259,100 @@
             this.panel1.Enabled = false;
             this.panel1.Location = new System.Drawing.Point(12, 39);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(776, 91);
+            this.panel1.Size = new System.Drawing.Size(776, 183);
             this.panel1.TabIndex = 89;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.checkBoxCompra);
+            this.panel3.Controls.Add(this.checkBoxCadFunc);
+            this.panel3.Controls.Add(this.checkBoxCadForn);
+            this.panel3.Controls.Add(this.checkBoxCadCli);
+            this.panel3.Controls.Add(this.checkBoxCadProd);
+            this.panel3.Controls.Add(this.label3);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel3.Location = new System.Drawing.Point(299, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(477, 183);
+            this.panel3.TabIndex = 89;
+            // 
+            // checkBoxCompra
+            // 
+            this.checkBoxCompra.AutoSize = true;
+            this.checkBoxCompra.Checked = true;
+            this.checkBoxCompra.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxCompra.Location = new System.Drawing.Point(12, 136);
+            this.checkBoxCompra.Name = "checkBoxCompra";
+            this.checkBoxCompra.Size = new System.Drawing.Size(186, 17);
+            this.checkBoxCompra.TabIndex = 95;
+            this.checkBoxCompra.Text = "Acesso a Lançamento de Compra";
+            this.checkBoxCompra.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxCadFunc
+            // 
+            this.checkBoxCadFunc.AutoSize = true;
+            this.checkBoxCadFunc.Checked = true;
+            this.checkBoxCadFunc.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxCadFunc.Location = new System.Drawing.Point(12, 113);
+            this.checkBoxCadFunc.Name = "checkBoxCadFunc";
+            this.checkBoxCadFunc.Size = new System.Drawing.Size(146, 17);
+            this.checkBoxCadFunc.TabIndex = 94;
+            this.checkBoxCadFunc.Text = "Cadastro de Funcionarios";
+            this.checkBoxCadFunc.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxCadForn
+            // 
+            this.checkBoxCadForn.AutoSize = true;
+            this.checkBoxCadForn.Checked = true;
+            this.checkBoxCadForn.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxCadForn.Location = new System.Drawing.Point(12, 90);
+            this.checkBoxCadForn.Name = "checkBoxCadForn";
+            this.checkBoxCadForn.Size = new System.Drawing.Size(151, 17);
+            this.checkBoxCadForn.TabIndex = 93;
+            this.checkBoxCadForn.Text = "Cadastro de Fornecedores";
+            this.checkBoxCadForn.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxCadCli
+            // 
+            this.checkBoxCadCli.AutoSize = true;
+            this.checkBoxCadCli.Checked = true;
+            this.checkBoxCadCli.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxCadCli.Location = new System.Drawing.Point(12, 67);
+            this.checkBoxCadCli.Name = "checkBoxCadCli";
+            this.checkBoxCadCli.Size = new System.Drawing.Size(123, 17);
+            this.checkBoxCadCli.TabIndex = 92;
+            this.checkBoxCadCli.Text = "Cadastro de Clientes";
+            this.checkBoxCadCli.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxCadProd
+            // 
+            this.checkBoxCadProd.AutoSize = true;
+            this.checkBoxCadProd.Checked = true;
+            this.checkBoxCadProd.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxCadProd.Location = new System.Drawing.Point(12, 44);
+            this.checkBoxCadProd.Name = "checkBoxCadProd";
+            this.checkBoxCadProd.Size = new System.Drawing.Size(128, 17);
+            this.checkBoxCadProd.TabIndex = 91;
+            this.checkBoxCadProd.Text = "Cadastro de Produtos";
+            this.checkBoxCadProd.UseVisualStyleBackColor = true;
+
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Corbel", 12.25F, System.Drawing.FontStyle.Bold);
+            this.label3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label3.Location = new System.Drawing.Point(8, 9);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(96, 21);
+            this.label3.TabIndex = 90;
+            this.label3.Text = "Permissões:";
             // 
             // frmCadUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(801, 568);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.grid);
             this.Controls.Add(this.btnCancelar);
@@ -279,6 +374,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.grid)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -299,5 +396,12 @@
         private System.Windows.Forms.TextBox txtSenha;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.CheckBox checkBoxCompra;
+        private System.Windows.Forms.CheckBox checkBoxCadFunc;
+        private System.Windows.Forms.CheckBox checkBoxCadForn;
+        private System.Windows.Forms.CheckBox checkBoxCadCli;
+        private System.Windows.Forms.CheckBox checkBoxCadProd;
+        private System.Windows.Forms.Label label3;
     }
 }

@@ -58,3 +58,4 @@ C:\Users\Arthur\OneDrive\Programação\C#\PDV\Projeto\pdv\bin\Debug\MySql.Data.d
 C:\Users\Arthur\OneDrive\Programação\C#\PDV\Projeto\pdv\obj\Debug\pdv.Telas.PDV.Form1.resources
 C:\Users\Arthur\OneDrive\Programação\C#\PDV\Projeto\pdv\obj\Debug\pdv.Telas.frmLogin.resources
 C:\Users\Arthur\OneDrive\Programação\C#\PDV\Projeto\pdv\obj\Debug\pdv.Telas.Cadastros.frmCadUsuario.resources
+C:\Users\Arthur\OneDrive\Programação\C#\PDV\Projeto\pdv\obj\Debug\pdv.Telas.Retaguarda.frmCompra.resources
