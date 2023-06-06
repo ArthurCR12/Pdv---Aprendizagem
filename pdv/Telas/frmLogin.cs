@@ -103,7 +103,8 @@ namespace pdv.Telas
                         }
                         else
                         {
-                            CheckBD.cargoUser = Convert.ToString(reader["user_cargo"]); this.Hide();
+                            CheckBD.cargoUser = Convert.ToString(reader["user_cargo"]); 
+                            this.Hide();
                             frmTelaPrincipal frmTelaPrincipal = new frmTelaPrincipal();
                             frmTelaPrincipal.ShowDialog();
                             this.Close();

@@ -10,5 +10,6 @@ namespace pdv
      {
         public static string nomeUser;
         public static string cargoUser = "ADMIN";
+        public static string idUser;
      }
 }

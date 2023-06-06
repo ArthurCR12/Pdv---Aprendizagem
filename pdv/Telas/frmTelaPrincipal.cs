@@ -51,74 +51,258 @@ namespace pdv
 
         private void menuCadCargos_Click(object sender, EventArgs e)
         {
-            Telas.Cadastros.frmCadCargos frm = new Telas.Cadastros.frmCadCargos();
-            frm.ShowDialog();
+            try
+            {
+                con.AbrirConexao();
+                MySqlCommand cmd = new MySqlCommand("SELECT user_pcadcargo FROM user WHERE user_name = @user_name", con.con);
+                cmd.Parameters.AddWithValue("@user_name", UserOn);
+                MySqlDataReader reader = cmd.ExecuteReader();
+
+                if (reader.Read())
+                {
+                    int valor = reader.GetInt32(0);
+
+                    if (valor == 0)
+                    {
+                        MessageBox.Show("Você não tem Permissão para Acessar !", "PERMISSÕES", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                    else if (valor == 1)
+                    {
+                        Telas.Cadastros.frmCadCargos frm = new Telas.Cadastros.frmCadCargos();
+                        frm.ShowDialog();
+                    }
+
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+            
         }
 
         private void btn_CadCli_Click(object sender, EventArgs e)
         {
+            try
+            {
+                con.AbrirConexao();
+                MySqlCommand cmd = new MySqlCommand("SELECT user_pcadprod FROM user WHERE user_name = @user_name", con.con);
+                cmd.Parameters.AddWithValue("@user_name", UserOn);
+                MySqlDataReader reader = cmd.ExecuteReader();
+
+                if (reader.Read())
+                {
+                    int valor = reader.GetInt32(0);
+
+                    if (valor == 0)
+                    {
+                        MessageBox.Show("Você não tem Permissão para Acessar !", "PERMISSÕES", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                    else if (valor == 1)
+                    {
+                        ;
+                    }
+
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
             Telas.Cadastros.frmCadClientes frm = new Telas.Cadastros.frmCadClientes();
             frm.ShowDialog();
 
         }
 
         private void btn_CadProd_Click(object sender, EventArgs e)
-        {
-            /* try
-             {
-                 con.AbrirConexao();
-                 MySqlCommand cmd = new MySqlCommand("SELECT user_pcadprod FROM user", con.con);
-                 MySqlDataReader reader = cmd.ExecuteReader();
+        {                       
+            try
+            {
+                con.AbrirConexao();
+                MySqlCommand cmd = new MySqlCommand("SELECT user_pcadprod FROM user WHERE user_name = @user_name", con.con);                
+                cmd.Parameters.AddWithValue("@user_name", UserOn);
+                MySqlDataReader reader = cmd.ExecuteReader();
 
-                 if (reader.Read())
-                 {                    
-                     int valor = reader.GetInt32(0);
-                     if (valor == 0) 
-                     {
-                         MessageBox.Show("Você não tem Permissão para Acessar!");
-                     }
-                     else if (valor == 1)
-                     {
-                         Telas.Cadastros.frmCadProd frm = new Telas.Cadastros.frmCadProd();
-                         frm.ShowDialog();
-                     }
+                if (reader.Read())
+                {
+                    int valor = reader.GetInt32(0);
 
+                    if (valor == 0)
+                    {
+                        MessageBox.Show("Você não tem Permissão para Acessar !", "PERMISSÕES", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                    else if (valor == 1)
+                    {
+                        Telas.Cadastros.frmCadProd frm = new Telas.Cadastros.frmCadProd();
+                        frm.ShowDialog();
+                    }
 
-                 }
+                }
+            }
+            catch (Exception ex)
+            {
+                 MessageBox.Show(ex.ToString());
+            }
 
-             }
-             catch (Exception)
-             {
-
-                 throw;
-             } 
-         */
         }
 
         private void btn_CadForn_Click(object sender, EventArgs e)
         {
+            try
+            {
+                con.AbrirConexao();
+                MySqlCommand cmd = new MySqlCommand("SELECT user_pcadprod FROM user WHERE user_name = @user_name", con.con);
+                cmd.Parameters.AddWithValue("@user_name", UserOn);
+                MySqlDataReader reader = cmd.ExecuteReader();
+
+                if (reader.Read())
+                {
+                    int valor = reader.GetInt32(0);
+
+                    if (valor == 0)
+                    {
+                        MessageBox.Show("Você não tem Permissão para Acessar !", "PERMISSÕES", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                    else if (valor == 1)
+                    {
+                        ;
+                    }
+
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
             Telas.Cadastros.frmCadForn frm = new Telas.Cadastros.frmCadForn();
             frm.ShowDialog();
         }
 
         private void btn_CadFuncionarios_Click(object sender, EventArgs e)
         {
+            try
+            {
+                con.AbrirConexao();
+                MySqlCommand cmd = new MySqlCommand("SELECT user_pcadprod FROM user WHERE user_name = @user_name", con.con);
+                cmd.Parameters.AddWithValue("@user_name", UserOn);
+                MySqlDataReader reader = cmd.ExecuteReader();
+
+                if (reader.Read())
+                {
+                    int valor = reader.GetInt32(0);
+
+                    if (valor == 0)
+                    {
+                        MessageBox.Show("Você não tem Permissão para Acessar !", "PERMISSÕES", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                    else if (valor == 1)
+                    {
+                        ;
+                    }
+
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
             Telas.Cadastros.frmCadFuncionario frm = new Telas.Cadastros.frmCadFuncionario();
             frm.ShowDialog();
 
         }
+
         private void menuCadUser_Click(object sender, EventArgs e)
         {
+            try
+            {
+                con.AbrirConexao();
+                MySqlCommand cmd = new MySqlCommand("SELECT user_pcadprod FROM user WHERE user_name = @user_name", con.con);
+                cmd.Parameters.AddWithValue("@user_name", UserOn);
+                MySqlDataReader reader = cmd.ExecuteReader();
+
+                if (reader.Read())
+                {
+                    int valor = reader.GetInt32(0);
+
+                    if (valor == 0)
+                    {
+                        MessageBox.Show("Você não tem Permissão para Acessar !", "PERMISSÕES", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                    else if (valor == 1)
+                    {
+                        ;
+                    }
+
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
             Telas.Cadastros.frmCadUsuario frm = new Telas.Cadastros.frmCadUsuario();
             frm.ShowDialog();
         }
+
         private void cadastroDeGruposToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            try
+            {
+                con.AbrirConexao();
+                MySqlCommand cmd = new MySqlCommand("SELECT user_pcadprod FROM user WHERE user_name = @user_name", con.con);
+                cmd.Parameters.AddWithValue("@user_name", UserOn);
+                MySqlDataReader reader = cmd.ExecuteReader();
+
+                if (reader.Read())
+                {
+                    int valor = reader.GetInt32(0);
+
+                    if (valor == 0)
+                    {
+                        MessageBox.Show("Você não tem Permissão para Acessar !", "PERMISSÕES", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                    else if (valor == 1)
+                    {
+                        ;
+                    }
+
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
             Telas.Cadastros.frmCadGrupos frm = new Telas.Cadastros.frmCadGrupos();
             frm.ShowDialog();
         }
+
         private void btnCompra_Click(object sender, EventArgs e)
         {
+            try
+            {
+                con.AbrirConexao();
+                MySqlCommand cmd = new MySqlCommand("SELECT user_pcadprod FROM user WHERE user_name = @user_name", con.con);
+                cmd.Parameters.AddWithValue("@user_name", UserOn);
+                MySqlDataReader reader = cmd.ExecuteReader();
+
+                if (reader.Read())
+                {
+                    int valor = reader.GetInt32(0);
+
+                    if (valor == 0)
+                    {
+                        MessageBox.Show("Você não tem Permissão para Acessar !", "PERMISSÕES", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                    else if (valor == 1)
+                    {
+                        ;
+                    }
+
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
             Telas.Retaguarda.frmCompra frm = new Telas.Retaguarda.frmCompra();
             frm.ShowDialog();
         }

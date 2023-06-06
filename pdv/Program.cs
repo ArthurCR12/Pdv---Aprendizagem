@@ -53,8 +53,9 @@ namespace pdv
 
         static void AbrirLogin()
         {
-            Telas.frmLogin frm = new Telas.frmLogin();
-            frm.ShowDialog();
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new Telas.frmLogin());
         }
 
     }

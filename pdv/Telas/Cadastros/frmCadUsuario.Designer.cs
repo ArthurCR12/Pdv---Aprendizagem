@@ -53,6 +53,9 @@
             this.checkBoxCadCli = new System.Windows.Forms.CheckBox();
             this.checkBoxCadProd = new System.Windows.Forms.CheckBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.checkBoxCadUser = new System.Windows.Forms.CheckBox();
+            this.checkBoxCadGrupo = new System.Windows.Forms.CheckBox();
+            this.checkBoxCadCargo = new System.Windows.Forms.CheckBox();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grid)).BeginInit();
             this.panel1.SuspendLayout();
@@ -264,6 +267,9 @@
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.checkBoxCadCargo);
+            this.panel3.Controls.Add(this.checkBoxCadGrupo);
+            this.panel3.Controls.Add(this.checkBoxCadUser);
             this.panel3.Controls.Add(this.checkBoxCompra);
             this.panel3.Controls.Add(this.checkBoxCadFunc);
             this.panel3.Controls.Add(this.checkBoxCadForn);
@@ -281,7 +287,7 @@
             this.checkBoxCompra.AutoSize = true;
             this.checkBoxCompra.Checked = true;
             this.checkBoxCompra.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBoxCompra.Location = new System.Drawing.Point(12, 136);
+            this.checkBoxCompra.Location = new System.Drawing.Point(208, 67);
             this.checkBoxCompra.Name = "checkBoxCompra";
             this.checkBoxCompra.Size = new System.Drawing.Size(186, 17);
             this.checkBoxCompra.TabIndex = 95;
@@ -335,7 +341,6 @@
             this.checkBoxCadProd.TabIndex = 91;
             this.checkBoxCadProd.Text = "Cadastro de Produtos";
             this.checkBoxCadProd.UseVisualStyleBackColor = true;
-
             // 
             // label3
             // 
@@ -347,6 +352,42 @@
             this.label3.Size = new System.Drawing.Size(96, 21);
             this.label3.TabIndex = 90;
             this.label3.Text = "Permissões:";
+            // 
+            // checkBoxCadUser
+            // 
+            this.checkBoxCadUser.AutoSize = true;
+            this.checkBoxCadUser.Checked = true;
+            this.checkBoxCadUser.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxCadUser.Location = new System.Drawing.Point(12, 136);
+            this.checkBoxCadUser.Name = "checkBoxCadUser";
+            this.checkBoxCadUser.Size = new System.Drawing.Size(122, 17);
+            this.checkBoxCadUser.TabIndex = 96;
+            this.checkBoxCadUser.Text = "Cadastro de Usuário";
+            this.checkBoxCadUser.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxCadGrupo
+            // 
+            this.checkBoxCadGrupo.AutoSize = true;
+            this.checkBoxCadGrupo.Checked = true;
+            this.checkBoxCadGrupo.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxCadGrupo.Location = new System.Drawing.Point(208, 44);
+            this.checkBoxCadGrupo.Name = "checkBoxCadGrupo";
+            this.checkBoxCadGrupo.Size = new System.Drawing.Size(120, 17);
+            this.checkBoxCadGrupo.TabIndex = 97;
+            this.checkBoxCadGrupo.Text = "Cadastro de Grupos";
+            this.checkBoxCadGrupo.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxCadCargo
+            // 
+            this.checkBoxCadCargo.AutoSize = true;
+            this.checkBoxCadCargo.Checked = true;
+            this.checkBoxCadCargo.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxCadCargo.Location = new System.Drawing.Point(12, 159);
+            this.checkBoxCadCargo.Name = "checkBoxCadCargo";
+            this.checkBoxCadCargo.Size = new System.Drawing.Size(119, 17);
+            this.checkBoxCadCargo.TabIndex = 98;
+            this.checkBoxCadCargo.Text = "Cadastro de Cargos";
+            this.checkBoxCadCargo.UseVisualStyleBackColor = true;
             // 
             // frmCadUsuario
             // 
@@ -403,5 +444,8 @@
         private System.Windows.Forms.CheckBox checkBoxCadCli;
         private System.Windows.Forms.CheckBox checkBoxCadProd;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.CheckBox checkBoxCadCargo;
+        private System.Windows.Forms.CheckBox checkBoxCadGrupo;
+        private System.Windows.Forms.CheckBox checkBoxCadUser;
     }
 }
